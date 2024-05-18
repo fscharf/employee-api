@@ -15,22 +15,20 @@ Getting Started
 ## Prerequisites
 
 - Node.js (v12.x or later)
-- npm or yarn
+- yarn
 
 ## Installation
 
 1. Clone the repository and navigate to the project directory:
 
 ```
-git clone https://github.com/your-username/simple-node-api.git
-cd simple-node-api
+git clone https://github.com/fscharf/employee-api.git
+cd employee-api
 ```
 
 2. Install dependencies:
 
 ```
-npm install
-# or
 yarn install
 ```
 
@@ -85,12 +83,12 @@ yarn format
 
 ## API Endpoints
 
-- Get all activities: `GET /activities`
-- Get a single activity by ID: `GET /activities/:id`
-- Get all bulletins: `GET /bulletins`
-- Get a single bulletin by ID: `GET /bulletins/:id`
-- Get all employees: `GET /employees`
-- Get a single employee by ID: `GET /employees/:id`
+- Get all activities: `GET /api/activities`
+- Get a single activity by ID: `GET /api/activities/:id`
+- Get all bulletins: `GET /api/bulletins`
+- Get a single bulletin by ID: `GET /api/bulletins/:id`
+- Get all employees: `GET /api/employees`
+- Get a single employee by ID: `GET /api/employees/:id`
 
 ## Description
 

@@ -2,20 +2,24 @@ import express from 'express';
 import activityRouter from './routes/activity';
 import bulletinRouter from './routes/bulletin';
 import employeeRouter from './routes/employee';
+import cors from 'cors';
 
 const app = express();
 const port = 3000;
 
-app.use(express.json());
+app.use(
+  cors({
+    origin: '*',
+    methods: 'GET',
+  }),
+);
 
-app.use('/activities', activityRouter);
-app.use('/bulletins', bulletinRouter);
-app.use('/employees', employeeRouter);
+app.use('/api/activities', activityRouter);
+app.use('/api/bulletins', bulletinRouter);
+app.use('/api/employees', employeeRouter);
 
-if (!process.env.PROD) {
-  app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-  });
-}
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
 
-export default app;
+module.exports = app;

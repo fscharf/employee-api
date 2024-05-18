@@ -6,7 +6,19 @@ const router = Router();
 const bulletins: IBulletin[] = bulletinsJson;
 
 router.get('/', (req: Request, res: Response) => {
-  res.json(bulletins);
+  const { employeeId } = req.query;
+
+  function getFilteredBulletins() {
+    if (employeeId) {
+      const filteredBulletins = bulletins.filter(
+        (bulletin) => bulletin.employeeId === parseInt(String(employeeId), 10),
+      );
+      return filteredBulletins;
+    }
+    return bulletins;
+  }
+
+  res.json(getFilteredBulletins());
 });
 
 router.get('/:id', (req: Request, res: Response) => {

@@ -6,7 +6,19 @@ const router = Router();
 const employees: IEmployee[] = employeesJson;
 
 router.get('/', (req: Request, res: Response) => {
-  res.json(employees);
+  const { name } = req.query;
+
+  function getFilteredEmployees() {
+    if (name) {
+      return employees.filter((employee) =>
+        employee.name.toLowerCase().includes((name as string).toLowerCase()),
+      );
+    }
+
+    return employees;
+  }
+
+  res.json(getFilteredEmployees());
 });
 
 router.get('/:id', (req: Request, res: Response) => {
