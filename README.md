@@ -21,15 +21,18 @@ Getting Started
 
 1. Clone the repository and navigate to the project directory:
 
-````
+```
 git clone https://github.com/your-username/simple-node-api.git
-cd simple-node-api```
+cd simple-node-api
+```
 
 2. Install dependencies:
 
-```npm install
+```
+npm install
 # or
-yarn install```
+yarn install
+```
 
 ## Configuration
 
@@ -50,27 +53,35 @@ The `tsconfig.json` file is set up to compile TypeScript to JavaScript.
 
 - Start the server:
 
-```npm start
+```
+npm start
 # or
-yarn start```
+yarn start
+```
 
 - Start the server with auto-restart:
 
-```npm run dev
+```
+npm run dev
 # or
-yarn dev```
+yarn dev
+```
 
 - Lint the code:
 
-```npm run lint
+```
+npm run lint
 # or
-yarn lint```
+yarn lint
+```
 
 - Format the code:
 
-```npm run format
+```
+npm run format
 # or
-yarn format```
+yarn format
+```
 
 ## API Endpoints
 
@@ -89,4 +100,3 @@ yarn format```
 ## License
 
 This project is licensed under the MIT License.
-````
